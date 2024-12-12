@@ -6,6 +6,10 @@
 #include <curl/header.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 #define DOCKER_SOKET_PATH "/var/run/docker.sock"
 
@@ -15,5 +19,6 @@ typedef struct {
 }Response;
 
 char *docker_get(const char *endpoint);
+void list_containers();
 
 #endif
